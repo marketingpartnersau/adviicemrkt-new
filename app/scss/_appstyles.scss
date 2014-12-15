@@ -1,0 +1,196 @@
+/* all app scss styles here */
+
+//Using the available options
+
+.white.button{
+	@include button($button-med, #fff, true);
+	color: $red-color;
+	text-transform: uppercase;
+
+	&:hover{
+		color: #fff;
+		background-color: darken($red-color, 10%);
+	}
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="phone"],
+select, 
+textarea{
+	@include radius();
+}
+
+select{
+	color: #fff;
+}
+
+strong{
+	font-weight: 500;
+}
+
+::-webkit-input-placeholder { color: #fff; }
+:-moz-placeholder { color: #fff; }
+::-moz-placeholder { color: #fff; }
+:-ms-input-placeholder { color: #fff; }
+
+h1, h2, h3{
+	font-weight: 700;
+}
+
+.box.button{
+	@include button($button-med, false, true);
+	border: 1px solid #fff;
+	text-transform: uppercase;
+}
+
+@media #{$medium-up}{
+
+	header.top{
+		padding: 1em 0;
+
+		.button{
+			margin-bottom: 0;
+		}
+	}
+
+	section.hero{
+		background-color: $red-color;
+		padding: 3rem 0;
+
+		h2, p{
+			color: #fff;
+		}
+
+		.pitch-seller{
+			position: relative;
+			text-align: center;
+			i.fa-comment{
+				font-size: 400px;
+				color: #fff;
+				margin-top: -3rem;
+			}
+
+			> div{
+				position: relative;
+				z-index: 9;
+				margin-top: -300px;
+				p{
+					color: $blue-color;
+					text-align: center;
+				}
+
+				p.pitches{
+					font-size: rem-calc(92px);
+					font-weight: bold;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	section.how-it-works{
+		padding: 5rem 0;
+
+		h2{
+			margin-bottom: 2rem;
+		}
+
+		ul{
+			li{
+				padding: 2em;
+				background-color: $red-color;
+				color: #fff;
+
+				&:nth-child(2){ background-color: lighten($red-color, 10%) }
+				&:nth-child(3){ background-color: lighten($red-color, 20%) }
+			}
+		}
+	}
+
+	.sticky{
+		&.fixed{
+			.join-text-logo{
+				p{
+					background: url(../images/logo-white@2x.png) no-repeat left center;
+					background-size: 150px;
+					text-indent: 100%;
+				}
+			}
+		}
+	}
+
+	header.join{
+		background-color: $blue-color;
+
+		p.join-text{
+			line-height: rem-calc(50);
+			color: #fff;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+		form{
+			padding: 1em 0;
+
+			p, button, input, select{
+				margin-bottom: 0;
+			}
+
+			input, select{
+				height: rem-calc(50px);
+			}
+		}
+	}
+
+	section.join{
+		background-color: #f6f6f6;
+		form{
+			padding: 3em 2em;
+			background-color: $blue-color;
+
+			h3{
+				color: #fff;
+			}
+		}
+
+		.seller{
+			padding: 3em 1em;
+
+			h2, h3, li{
+				color: $red-color;
+			}
+		}
+	}
+
+	footer{
+		.links{
+			padding: 3em 0;
+			h4{
+				font-size: rem-calc(18);
+				text-transform: uppercase;
+				color: #aaa;
+			}
+		}
+		.copyright{
+			background-color: #eee;
+			padding: 1em 0;
+
+			.red{
+				color: $red-color;
+			}
+
+			.grey{
+				color: #aaa;
+			}
+		}
+	}
+}
+
