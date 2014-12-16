@@ -5939,6 +5939,9 @@ th.hide-for-touch {
     display: table-cell !important; } }
 
 /* all app scss styles here */
+.button {
+  text-transform: uppercase; }
+
 .white.button {
   border-style: solid;
   border-width: 0;
@@ -5961,10 +5964,8 @@ th.hide-for-touch {
   background-color: #fff;
   border-color: #cccccc;
   color: #333333;
-  border-radius: 3px;
   transition: background-color 300ms ease-out;
-  color: #ed1c24;
-  text-transform: uppercase; }
+  color: #ed1c24; }
   .white.button:hover, .white.button:focus {
     background-color: #cccccc; }
   .white.button:hover, .white.button:focus {
@@ -5972,6 +5973,14 @@ th.hide-for-touch {
   .white.button:hover {
     color: #fff;
     background-color: #c61019; }
+
+.box.button {
+  border: 1px solid #fff; }
+
+.blue.button {
+  background-color: #46c3d3; }
+  .blue.button:hover {
+    background-color: #228691; }
 
 body {
   font-family: 'Roboto', sans-serif; }
@@ -5999,30 +6008,6 @@ strong {
 
 h1, h2, h3 {
   font-weight: 700; }
-
-.box.button {
-  border-style: solid;
-  border-width: 0;
-  cursor: pointer;
-  font-family: 'Roboto', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  line-height: normal;
-  margin: 0 0 1.25rem;
-  position: relative;
-  text-decoration: none;
-  text-align: center;
-  -webkit-appearance: none;
-  border-radius: 0;
-  display: inline-block;
-  padding-top: 1rem;
-  padding-right: 2rem;
-  padding-bottom: 1.0625rem;
-  padding-left: 2rem;
-  font-size: 1rem;
-  border-radius: 3px;
-  transition: background-color 300ms ease-out;
-  border: 1px solid #fff;
-  text-transform: uppercase; }
 
 @media only screen and (min-width:40.063em) {
   header.top {
@@ -6052,6 +6037,8 @@ h1, h2, h3 {
           font-size: 5.75rem;
           font-weight: bold;
           margin: 0; }
+    section.hero .buttons .button {
+      border-radius: 3px; }
   section.how-it-works {
     padding: 5rem 0; }
     section.how-it-works h2 {
@@ -6105,3 +6092,54 @@ h1, h2, h3 {
       color: #ed1c24; }
     footer .copyright .grey {
       color: #aaa; } }
+
+@media only screen and (max-width: 40em) {
+  header.top {
+    padding: 1em 0; }
+    header.top .button {
+      margin-bottom: 0; }
+  section.hero .pitch-seller {
+    background-color: #ed1c24;
+    text-align: center;
+    color: #fff;
+    padding: 1em 0; }
+    section.hero .pitch-seller p {
+      margin-bottom: 0; }
+    section.hero .pitch-seller .pitches {
+      font-size: 4rem;
+      font-weight: bold;
+      line-height: 1; }
+  section.hero h2 {
+    margin-top: 1em; }
+  section.how-it-works h2 {
+    padding: 1em 1.875rem; }
+  section.how-it-works ul li {
+    background-color: #ed1c24;
+    color: #fff;
+    padding: 1em; }
+    section.how-it-works ul li:nth-child(2) {
+      background-color: #f14b54; }
+    section.how-it-works ul li:nth-child(3) {
+      background-color: #f47b81; }
+  section.how-it-works .mobile-cards {
+    padding: 0 1.875rem; }
+  section.how-it-works .how-subtitle {
+    background-color: #ed1c24;
+    color: #fff;
+    padding: 1em 1.875rem; }
+    section.how-it-works .how-subtitle p {
+      margin-bottom: 0; }
+  header.join {
+    display: none; }
+  footer {
+    background-color: #f6f6f6;
+    padding: 2em 0 0; }
+    footer .bubbles {
+      display: block;
+      margin-bottom: 1em; }
+    footer .copyright {
+      background-color: #46c3d3;
+      color: #fff;
+      margin-top: 2em;
+      margin-bottom: 0;
+      padding: 1em inherit; } }

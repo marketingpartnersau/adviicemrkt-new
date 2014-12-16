@@ -2,14 +2,29 @@
 
 //Using the available options
 
-.white.button{
-	@include button($button-med, #fff, true);
-	color: $red-color;
+.button{
 	text-transform: uppercase;
+}
+
+.white.button{
+	@include button($button-med, #fff, false);
+	color: $red-color;
 
 	&:hover{
 		color: #fff;
 		background-color: darken($red-color, 10%);
+	}
+}
+
+.box.button{
+	border: 1px solid #fff;
+}
+
+.blue.button{
+	background-color: $blue-color;
+
+	&:hover{
+		background-color: darken($blue-color, 20%);
 	}
 }
 
@@ -43,12 +58,6 @@ strong{
 
 h1, h2, h3{
 	font-weight: 700;
-}
-
-.box.button{
-	@include button($button-med, false, true);
-	border: 1px solid #fff;
-	text-transform: uppercase;
 }
 
 @media #{$medium-up}{
@@ -92,6 +101,12 @@ h1, h2, h3{
 					font-weight: bold;
 					margin: 0;
 				}
+			}
+		}
+
+		.buttons{
+			.button{
+				@include radius();
 			}
 		}
 	}
@@ -190,6 +205,93 @@ h1, h2, h3{
 			.grey{
 				color: #aaa;
 			}
+		}
+	}
+}
+
+@media #{$small-only}{
+	header.top{
+		padding: 1em 0;
+
+		.button{
+			margin-bottom: 0;
+		}
+	}
+
+	section.hero{
+		.pitch-seller{
+			background-color: $red-color;
+			text-align: center;
+			color: #fff;
+			padding: 1em 0;
+
+			p{
+				margin-bottom: 0;
+			}
+
+			.pitches{
+				font-size: 4rem;
+				font-weight: bold;
+				line-height: 1;
+			}
+		}
+
+		h2{
+			margin-top: 1em;
+		}
+	}
+
+	section.how-it-works{
+
+		h2{
+			padding: 1em $column-gutter;
+		}
+
+		ul{
+			li{
+				background-color: $red-color;
+				color: #fff;
+				padding: 1em;
+
+				&:nth-child(2){ background-color: lighten($red-color, 10%) }
+				&:nth-child(3){ background-color: lighten($red-color, 20%) }
+			}
+		}
+
+		.mobile-cards{
+			padding: 0 $column-gutter;
+		}
+
+		.how-subtitle{
+			background-color: $red-color;
+			color: #fff;
+			padding: 1em $column-gutter;
+
+			p{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	header.join{
+		display: none;
+	}
+
+	footer{
+		background-color: #f6f6f6;
+		padding: 2em 0 0;
+
+		.bubbles{
+			display: block;
+			margin-bottom: 1em;
+		}
+
+		.copyright{
+			background-color: $blue-color;
+			color: #fff;
+			margin-top: 2em;
+			margin-bottom: 0;
+			padding: 1em inherit;
 		}
 	}
 }

@@ -22,11 +22,11 @@
 
     <header class="top">
       <div class="row">
-        <div class="small-9 columns">
+        <div class="small-6 medium-9 columns">
           <img src="images/logo@2x.png" width="150px" alt="" class="logo">
         </div>
-        <div class="small-3 columns">
-          <a class="right white button" href="#join">Join now</a>
+        <div class="small-6 medium-3 columns">
+          <a class="right white button" href="#join">Join<span class="hide-for-small"> now</span></a>
         </div>
       </div>
     </header>
@@ -34,7 +34,7 @@
     <section class="hero">
       <div class="row">
         <div class="small-12 medium-6 columns medium-push-6 pitch-seller">
-          <i class="fa fa-comment fa-5x"></i>
+          <i class="fa fa-comment fa-5x hide-for-small"></i>
           <div>
             <p class="pitches"><i class="fa fa-user"></i> 125</p>
             <p>Potential Clients Waiting</p>
@@ -44,11 +44,15 @@
           <h2>Are you a Specialist in your field, and want new clients?</h2>
           <p><strong>adviicemrkt has plenty of people looking for Financial Planners, Accountants, Real Estate Agents, Mortgage Lenders and Lawyers.</strong></p>
           <p>We’ll connect you with them, and the rest is history. We just want to play matchmaker!</p>
-          <p class="buttons">
+          <p class="buttons hide-for-small">
             <a href="#join" class="white button">Join</a>
             <a href="#more" class="box button">Tell Me More</a>
           </p>
         </div>
+        <ul class="button-group show-for-small">
+          <li><a href="#show-join" class="button">Join Now</a></li>
+          <li><a href="#more" class="blue button">Tell Me More</a></li>
+        </ul>
       </div>
     </section>
 
@@ -83,9 +87,17 @@
     </div>
 
     <section class="how-it-works">
-      <div class="row">
+      <div class="row small-collapse medium-uncollapse">
         <div class="small-12 medium-7 columns">
           <h2>Our seekers submit requests, and you can pitch directly to them.</h2>
+
+          <div class="show-for-small how-subtitle">
+            <p><strong>After registering, you’ll notice the “opportunities” tab. This is where your gold is.</strong></p>
+          </div>
+
+          <div class="show-for-small mobile-cards">
+            <img src="images/pitch-preview.png" alt="">
+          </div>
 
           <ul class="steps no-bullet">
             <li>Here, you can pitch to them: how will you help them? How can you make a difference?</li>
@@ -94,7 +106,7 @@
           </ul>
         </div>
 
-        <div class="small-12 medium-4 medium-offset-1 columns">
+        <div class="hide-for-small medium-4 medium-offset-1 columns">
           <img src="images/pitch-preview.png" alt="">
         </div>
       </div>
@@ -104,7 +116,8 @@
       <div class="row">
         <div class="small-12 medium-6 columns">
           <form action="confirm.html">
-            <h3>Join adviicemrkt</h3>
+            <h2 class="show-for-small">New clients are only a click away. What are you waiting for?</h2>
+            <h3 class="hide-for-small">Join adviicemrkt</h3>
             <p><input type="text" name="name" placeholder="Name"></p>
             <p><input type="email" name="email" placeholder="Email"></p>
             <p>
@@ -117,7 +130,8 @@
                 <option value="lawyew">Lawyer</option>
               </select>
             </p>
-            <p><button class="radius white button">JOIN</button></p>
+            <p class="hide-for-small"><button class="radius white button">JOIN</button></p>
+            <p show="hide-for-small"><button class="radius button">JOIN</button></p>
           </form>
         </div>
         <div class="show-for-medium-up medium-6 columns">
@@ -138,7 +152,7 @@
     <footer>
       <div class="links">
         <div class="row">
-          <div class="small-12 medium-3 columns">
+          <div class="hide-for-small medium-3 columns">
             <h4>Specialists</h4>
             <ul class="no-bullet">
               <li><a href="">Lawyers</a></li>
@@ -149,7 +163,8 @@
             </ul>
           </div>
           <div class="small-12 medium-3 columns">
-            <h4>I need advice</h4>
+            <img src="images/bubbles.png" width="80px" alt="" class="show-for-small">
+            <h4 class="hide-for-small">I need advice</h4>
             <ul class="no-bullet">
               <li><a href="">Get Advice</a></li>
               <li><a href="">How it works</a></li>
@@ -157,7 +172,7 @@
             </ul>
           </div>
           <div class="small-12 medium-3 columns">
-            <h4>Other Stuff</h4>
+            <h4 class="hide-for-small">Other Stuff</h4>
             <ul class="no-bullet">
               <li><a href="">Privacy Policy</a></li>
               <li><a href="">Terms of Use</a></li>

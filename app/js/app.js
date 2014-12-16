@@ -20,6 +20,7 @@ var app = (function(document, $) {
 (function() {
 
 	'use strict';
+	
 	app.init();
 
 })();
