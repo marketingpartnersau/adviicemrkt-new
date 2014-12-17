@@ -1,5 +1,7 @@
 <?php 
 
+	header('Content-Type: application/json');
+
 	extract($_POST); // name, email, industry, page
 
 	$file = 'signups.csv';
@@ -27,8 +29,7 @@
 		$response = array('success' => 'person added successfully');
 	else
 		$response = array('error' => 'person wasn\'nt emailed');
-	
-	header('Content-Type: application/json');
+
 	echo json_encode($response);
 
 	exit;
