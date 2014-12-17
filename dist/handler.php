@@ -4,9 +4,9 @@
 
 	extract($_POST); // name, email, industry, page
 
-	$name = 'Harley';
-	$email = 'test@test.com';
-	$industry = 'Real Estate';
+	// $name = 'Harley';
+	// $email = 'test@test.com';
+	// $industry = 'Real Estate';
 
 	$file = 'signups.csv';
 	$data = file_get_contents($file);
@@ -24,9 +24,9 @@
 	";
 
 	$headers  = "From: signups@adviicemrkt.com\r\nReply-To: signups@adviicemrkt.com";
-	$headers .= "Cc: harley@marketingpartners.com.au\r\n";
+	// $headers .= "Cc: harley@marketingpartners.com.au\r\n";
 
-	$sent = mail('kristen@marketingpartners.com.au', 'New signup through landing pages', $message, $headers);
+	$sent = mail('harley@marketingpartners.com.au', 'New signup through landing pages', $message, $headers);
 
 	if($sent)
 		$response = array('success' => 'person added successfully');
