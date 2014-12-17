@@ -4,6 +4,10 @@
 
 	extract($_POST); // name, email, industry, page
 
+	$name = 'Harley';
+	$email = 'test@test.com';
+	$industry = 'Real Estate';
+
 	$file = 'signups.csv';
 	$data = file_get_contents($file);
 	
@@ -17,7 +21,6 @@
 		<strong>Name: $name</strong> \n
 		<strong>Email: $email</strong> \n
 		<strong>Industry: $industry</strong> \n
-		<strong>Landing Page: $page</strong> \n
 	";
 
 	$headers  = "From: signups@adviicemrkt.com\r\nReply-To: signups@adviicemrkt.com";
