@@ -19,17 +19,19 @@
     <!-- endbuild -->
   </head>
   <body>
-
-    <header class="top">
-      <div class="row">
-        <div class="small-6 medium-9 columns">
-          <img src="images/logo@2x.png" width="150px" alt="" class="logo">
+    <div class="sticky">
+      <header class="top">
+        <div class="row">
+          <div class="small-6 medium-9 columns">
+            <img src="images/logo@2x.png" width="150px" alt="" class="logo">
+          </div>
+          <div class="small-6 medium-3 columns">
+            <a class="right white button" href="#join">Join<span class="hide-for-small"> now</span></a>
+          </div>
         </div>
-        <div class="small-6 medium-3 columns">
-          <a class="right white button" href="#join">Join<span class="hide-for-small"> now</span></a>
-        </div>
-      </div>
-    </header>
+      </header>
+    </div>
+      
 
     <section class="hero">
       <div class="row">
@@ -50,14 +52,24 @@
           </p>
         </div>
         <ul class="button-group show-for-small">
-          <li><a href="#show-join" class="button">Join Now</a></li>
+          <li><a href="#join" class="button">Join Now</a></li>
           <li><a href="#more" class="blue button">Tell Me More</a></li>
         </ul>
       </div>
     </section>
 
     <div class="sticky">
-      <header class="join" data-topbar data-options="sticky_on: large">
+      <header class="join form-parent" data-topbar data-options="sticky_on: large">
+
+        <div class="success">
+          <div class="row">
+            <div class="small-12 columns">
+              <h2>Thanks! We're currently verifying your account</h2>
+              <p>You'll have access shortly.</p>
+            </div>
+          </div>
+          
+        </div>
 
         <form class="row" method="POST" action="confirm.html">
           <div class="medium-3 columns join-text-logo">
@@ -76,7 +88,7 @@
               <option value="mortgage-broker">Mortgage Broker</option>
               <option value="accountant">Accountant</option>
               <option value="financial-planner">Financial Planner</option>
-              <option value="lawyew">Lawyer</option>
+              <option value="lawyer">Lawyer</option>
             </select>
           </div>
           <div class="medium-2 columns last">
@@ -86,7 +98,7 @@
       </header>
     </div>
 
-    <section class="how-it-works">
+    <section class="how-it-works" id="more">
       <div class="row small-collapse medium-uncollapse">
         <div class="small-12 medium-7 columns">
           <h2>Our seekers submit requests, and you can pitch directly to them.</h2>
@@ -112,10 +124,14 @@
       </div>
     </section>
 
-    <section class="join">
+    <section class="join" id="join">
       <div class="row">
-        <div class="small-12 medium-6 columns">
-          <form action="confirm.html">
+        <div class="small-12 small-collapse medium-uncollapse medium-6 columns form-parent">
+          <div class="success">
+            <h2>Thanks! We're currently verifying your account</h2>
+            <p>You'll have access shortly.</p>
+          </div>
+          <form action="" method="POST">
             <h2 class="show-for-small">New clients are only a click away. What are you waiting for?</h2>
             <h3 class="hide-for-small">Join adviicemrkt</h3>
             <p><input type="text" name="name" placeholder="Name"></p>
@@ -127,11 +143,11 @@
                 <option value="mortgage-broker">Mortgage Broker</option>
                 <option value="accountant">Accountant</option>
                 <option value="financial-planner">Financial Planner</option>
-                <option value="lawyew">Lawyer</option>
+                <option value="lawyer">Lawyer</option>
               </select>
             </p>
-            <p class="hide-for-small"><button class="radius white button">JOIN</button></p>
-            <p show="hide-for-small"><button class="radius button">JOIN</button></p>
+            <p class="hide-for-small"><button class=" hide-for-small radius white button">JOIN</button></p>
+            <p class="show-for-small"><button class="radius button">JOIN</button></p>
           </form>
         </div>
         <div class="show-for-medium-up medium-6 columns">
@@ -163,7 +179,7 @@
             </ul>
           </div>
           <div class="small-12 medium-3 columns">
-            <img src="images/bubbles.png" width="80px" alt="" class="show-for-small">
+            <img src="images/bubbles.png" width="80px" alt="" class="show-for-small" class="bubbles">
             <h4 class="hide-for-small">I need advice</h4>
             <ul class="no-bullet">
               <li><a href="">Get Advice</a></li>

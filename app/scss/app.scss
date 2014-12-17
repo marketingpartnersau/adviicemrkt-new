@@ -44,4 +44,5 @@
   "foundation/components/offcanvas",
   "foundation/components/visibility";
 
-  @import "appstyles";
+  @import "../bower_components/material-shadows/material-shadows",
+    "appstyles";

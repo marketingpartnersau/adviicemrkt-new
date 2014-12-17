@@ -9,10 +9,29 @@ var app = (function(document, $) {
 		_init = function() {
 			$(document).foundation();
 			_userAgentInit();
+		},
+		_submitJoin = function(){
+			$('form').on('submit', function(evt, s){
+				evt.preventDefault();
+				var data = $(this).serializeArray();
+
+				var self = $(this);
+
+				$.post('handler.php', data)
+				.success(function(result){
+					if(result.hasOwnProperty('success')){
+						self.parents('.form-parent').addClass('done');
+					}
+				});
+
+				
+
+			});
 		};
 
 	return {
-		init: _init
+		init: _init,
+		join: _submitJoin
 	};
 
 })(document, jQuery);
@@ -22,5 +41,6 @@ var app = (function(document, $) {
 	'use strict';
 	
 	app.init();
+	app.join();
 
 })();
